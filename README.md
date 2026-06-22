@@ -1,8 +1,13 @@
-# dnSpy Agent Analysis Service
+# AgentAnalysisService — dnSpy Agent Analysis Service
 
 **Headless .NET Assembly Analysis API for AI Agents**
 
 基于 dnSpy 内核的无 GUI 分析服务，提供 RESTful HTTP API，使 AI Agent 可以通过网络调用直接分析 .NET DLL/EXE 文件。
+
+> ⚠️ **本程序是基于 [dnSpy](https://github.com/dnSpy/dnSpy) 修改的衍生作品**，
+> 在 dnSpy 的 dnlib + ICSharpCode.Decompiler 基础上构建为无头 HTTP 服务。
+> 修改内容：将 GUI 程序重构为 ASP.NET Core REST API，新增敏感 API 扫描、
+> 依赖关系分析、缓存机制等功能。
 
 ## 快速启动
 
@@ -298,3 +303,17 @@ curl -X POST http://localhost:5099/api/decompile \
 | 💻 **System** | Environment vars, SystemEvents |
 
 每条规则带有 `Critical` / `Warning` / `Info` 严重级别标注。
+
+## 许可证
+
+Copyright (C) 2024 Jpvfsnrt
+
+本程序是免费软件：你可以根据自由软件基金会发布的 **GNU 通用公共许可证**
+（GPLv3 或任何更高版本）的条款重新分发和/或修改它。
+
+本程序基于 [dnSpy](https://github.com/dnSpy/dnSpy)（Copyright (C) 2014-2020 0xd4d, GPLv3）修改而来，
+以无 GUI 的 HTTP 服务形式提供 .NET 程序集分析能力。
+
+本程序的发布是希望它有用，但**没有任何担保**；
+甚至没有对适销性或特定用途适用性的默示担保。
+详见 LICENSE 文件。
