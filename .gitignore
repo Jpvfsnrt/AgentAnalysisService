@@ -1,0 +1,26 @@
+# .NET build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# .NET publishing
+publish/
+*.nupkg
+
+# IDE & editor files
+.vs/
+*.user
+*.suo
+*.userprefs
+.vscode/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Config with secrets (keep appsettings.json, but ignore overrides)
+appsettings.Development.json
